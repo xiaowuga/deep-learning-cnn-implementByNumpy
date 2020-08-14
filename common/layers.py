@@ -167,6 +167,7 @@ class BatchNormalization:
     def _backward(self, dout):
         dbeta = dout.sum(axis=0)
         dgamma = np.sum(self.xn * dout, axis=0)
+
         dxn = self.gamma * dout
         dxc = dxn / self.std
         dstd = -np.sum((dxn * self.xc) / (self.std * self.std), axis=0)
