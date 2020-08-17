@@ -2,7 +2,6 @@ import numpy as np
 from common.util import *
 
 
-a = np.arange(2 * 2).reshape(2, 2)
-print(a)
-t = np.mean(a, axis=0)
-print(t)
+nums = [-1,0,1,2,-1,-4]
+test = np.zeros((3, 4), dtype=np.bool)
+print(test)
